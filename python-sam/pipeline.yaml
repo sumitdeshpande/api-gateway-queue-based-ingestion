@@ -1,0 +1,15 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
+
+AWSTemplateFormatVersion: 2010-09-09
+Description: >
+  This template generates a 2-environment CI/CD Pipeline for Queue-based ingestion with API Gateway application
+  Based on https://github.com/aws-samples/cookiecutter-aws-sam-pipeline
+
+Resources:
+  CodeRepository:
+    Type: AWS::CodeCommit::Repository
+    Properties:
+      RepositoryName: !Ref AWS::StackName
+      RepositoryDescription: Code repository for serverless API sample application
+

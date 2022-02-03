@@ -1,0 +1,9 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
+
+Description: >
+  This template creates Cognito user and identity pools. 
+  Unauthorized access is denied any access by default. 
+  Authorized and unauthorized roles are created for identity pool. 
+  Authorized role does not have any policy associated, add it in the parent 
+  stack with privileges needed.

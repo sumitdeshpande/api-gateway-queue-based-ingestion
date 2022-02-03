@@ -1,0 +1,22 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
+
+AWSTemplateFormatVersion: 2010-09-09
+Transform:
+  - AWS::Serverless-2016-10-31
+
+Description: >
+  Backend API with Lambda and DynamoDB, Lambda Authorizer
+
+Globals:
+  Function:
+    Runtime: python3.8
+    MemorySize: 128
+    Timeout: 100
+    Tracing: Active
+
+Parameters:
+  CognitoStackName:
+    Description: An environment name for Cognito stack
+    Type: String
+    Default: apigw-samples-cognito-shared
